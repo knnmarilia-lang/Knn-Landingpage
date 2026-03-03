@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia Internacional das Mulheres | KNN Idiomas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Montserrat for clean sans, Great Vibes for elegant script -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background floral decoration (using pure CSS and soft shapes) -->
+    <div class="bg-decoration">
+        <div class="large-number fade-in-up">8</div>
+        <div class="flower flower-1 fade-in">💮</div>
+        <div class="flower flower-2 fade-in">🌸</div>
+        <div class="flower flower-3 fade-in">🌺</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="wrapper">
+
+        <!-- Header / Nav -->
+        <header class="top-header">
+            <img src="KNN_Logo-1 (1).png" alt="KNN Idiomas" class="knn-logo-img">
+        </header>
+
+        <main class="main-content">
+            <!-- Left Side / Top: Typography and Greeting -->
+            <section class="greeting-section">
+                <p class="date-eyebrow fade-in-up">08 DE MARÇO | DIA INTERNACIONAL DAS MULHERES</p>
+
+                <h1 class="main-title text-focus-in">
+                    FELIZ DIA DAS
+                    <span class="script-text">mulheres</span>
+                </h1>
+
+                <p class="greeting-subtitle fade-in-up">
+                    Pare um pouquinho e pense em você! <br>
+                    Onde quer que você esteja, você é capaz de florescer e prosperar.
+                </p>
+
+                <p class="promo-text fade-in-up">
+                    Neste dia especial, a KNN quer homenagear as mulheres da sua vida. Indique quem te inspira para
+                    concorrer a uma <strong>Bolsa de 100% de desconto</strong> no curso de idiomas.
+                </p>
+            </section>
+
+            <!-- Right Side / Bottom: Form -->
+            <section class="form-section fade-in">
+                <div class="form-container">
+                    <h2 class="form-title">Presenteie com Conhecimento</h2>
+                    <p class="form-desc">Preencha os dados abaixo para participar do sorteio oficial.</p>
+
+                    <form id="sorteio-form">
+                        <div class="input-wrapper">
+                            <label for="referrer">Quem está indicando?</label>
+                            <input type="text" id="referrer" placeholder="Seu nome" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="referred">Quem você quer homenagear?</label>
+                            <input type="text" id="referred" placeholder="Nome da indicada" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="phone">WhatsApp da Indicada</label>
+                            <input type="tel" id="phone" placeholder="(00) 00000-0000" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text">Confirmar Indicação 🌸</span>
+                            <div class="spinner hidden" id="spinner"></div>
+                        </button>
+
+                        <div class="success-box hidden" id="success-message">
+                            <strong>Indicação Feita! 💖</strong>
+                            <p>Sua homenagem foi registrada com sucesso.</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
