@@ -24,21 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Elegant form processing
-        btnText.classList.add('hidden');
-        spinner.classList.remove('hidden');
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.7';
+        // Format the message for WhatsApp
+        const phoneNumber = "5514998944441";
+        const message = `Olá! Acabei de preencher o formulário do Dia da Mulher.%0A%0A*Meu Nome (Indicador):* ${referrer}%0A*Mulher Indicada:* ${referred}%0A*WhatsApp da Indicada:* ${phone}%0A%0AQuero validar minha participação no sorteio da bolsa de 100%! 🌸`;
 
-        // Fake processing
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+        // Redirect to WhatsApp after briefly showing the loader
         setTimeout(() => {
-            // Hide inputs with a fade
+            // Restore button visual (in case they come back)
+            btnText.classList.remove('hidden');
+            spinner.classList.add('hidden');
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+
+            // Redirect the user
+            window.open(whatsappUrl, '_blank');
+
+            // Optionally, show a success message on the page itself
             const inputs = form.querySelectorAll('.input-wrapper');
             inputs.forEach(input => input.style.display = 'none');
             submitBtn.style.display = 'none';
-
-            // Show delicate success message
             successMessage.classList.remove('hidden');
-        }, 1200);
+        }, 800);
     });
 });
